@@ -1,21 +1,11 @@
 pipeline {
-
-    agent {
-        node {
-            label 'master'
-        }
-    }
-    }
-
+    agent any
+    
     stages {
-        
-        stage('Cleanup Workspace') {
+        stage('Build') {
             steps {
-                sh """
-                echo "Cleaned Up Workspace For Project"
-                """
+                sh 'echo "Building the project'
             }
         }
-
-    }   
+    }
 }
